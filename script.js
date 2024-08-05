@@ -1,6 +1,17 @@
 function nextPalindrome(num) {
-  //your JS code here.
-}
+    let option  = num + 1;
+    const isPalindrome = (str) => {
+        const reversedStr = str.split('').reverse().join('');
+        return str === reversedStr;
+    }
 
-const input = prompt("Enter a palindrome number");
-alert(nextPalindrome(input));
+    while (true) {
+        if(isPalindrome(option.toString())) {
+            return option;
+        }
+        option++;
+    }
+}
+ 
+const input = prompt("Enter a number");
+alert(nextPalindrome(parseInt(input)));
